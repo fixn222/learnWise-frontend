@@ -42,15 +42,15 @@ const SubjectsList = () => {
                 {
                     id: 'name',
                     accessorKey: 'name',
-                    size: 100,
+                    size: 150,
                     header: () => <p className='column-title ml-2'>Name</p>,
                     cell: ({ getValue }) => <span className='text-foreground'>{getValue<string>()}</span>,
                     filterFn: "includesString"
                 },
                 {
                     id: 'depatment',
-                    accessorKey: 'department',
-                    size: 150,
+                    accessorKey: 'department.name',
+                    size: 250,
                     header: () => <p className='column-title ml-2'>Deparment</p>,
                     cell: ({ getValue }) => <Badge variant={'secondary'}>{getValue<string>()}</Badge>,
                 },
